@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    margin: auto;
+}
+.main .all-tasks-list{
+    width: 70%;
+    margin: 0 auto;
+    background: #f2dc91;
+    flex-direction: column;
+    padding: 40px 0px;
+    box-shadow: #828282 0px 2px 15px;
+}
+.main .all-tasks-list>h1{
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #3f3f3f;
+    font-size: 32px; 
+}
+.main .all-tasks-list>h1:nth-last-child(1){
+    font-size: 15px;
+}
+.main .all-tasks-list .delete-all{
+    position: absolute;
+    right: 22%;
+    top: 75px;
+}
+.main .all-tasks-list .delete-all button{
+    font-family: 'Sawarabi Gothic';
+    border: 1px solid;
+    background: #c5c5c5;
+    border-radius: 5px;
+    color: #3f3f3f;
+}
+.main nav{
+    background: grey;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+}
+.main nav ul{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+.main nav ul li{
+    list-style-type: none;   
+    padding: 0px 20px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    color: #3f3f3f;
+    font-size: 22px; 
+    cursor: pointer;
+}
+.main nav ul li:hover{
+    color: #d9d9d9;
+}
+.main .center{
+    display: flex;
+    align-items: center;
+}
+
+.main .create{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .create input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    height: 52px;
+    font-family: 'Bad Script', cursive;
+    font-size: 2em;
+}
+.main .create input:focus{
+    outline: none;
+}    
+.main .task{
+    width: 80%;
+    border-bottom: 1px solid #404040;
+    padding: 7px 0px;
+}
+.main .task .label{
+    width: 65%;
+    font-family: 'Bad Script', cursive;
+    color: #3f3f3f;
+    margin: 0px 0px 0px 6% !important;
+    text-indent: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    word-break: break-word;
+    cursor: pointer;
+}
+.main .task input{
+    border: none;
+    background: transparent;
+}
+.main .task input:focus{
+    outline: none;
+}
+.main .task .box{
+    width: 50%;
+    min-width: 30px;
+    max-width: 40px;
+    cursor: pointer;
+}
+.main .task .box:nth-last-child(1){
+    position: absolute;
+    right: 22%;
+}
+.displayMsg{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    box-shadow: #828282 0px 2px 15px;
+    border-radius: 15px;
+    animation: fadeOut 2.5s;
+}
+.displayMsg h1{
+    font-size: 20px;
+    font-family: 'Sawarabi Gothic';
+    padding: 20px 30px;
+    margin: 0;
+}
+@keyframes fadeOut {
+    0% { opacity: 1;}
+    90% { opacity: 0.9;}
+    100% { opacity: 0;}
+}
+
+@media (max-width: 510px){
+    .main nav ul li{
+        font-size: 14px;
+        padding: 0px 15px 0px 0px;
+    }
+    .main .create input{
+        font-size: 20px;
+        padding-right: 40px
+    }
+    .all-tasks-list{
+        width: 85%;
+    }
+    .all-tasks-list .delete-all{
+        position: relative;
+        right: initial;
+        top: initial;
+    }
+    .displayMsg h1{
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .main .task .label{
+        width: 55%;
+    }
+}
